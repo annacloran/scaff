@@ -3,5 +3,5 @@ services:
 before_install:
   - docker image build -t annacloran/imagetest .
 deploy:
-  - provider: script
-  - script: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD && docker push annacloran/imagetest
+  provider: script
+  script: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD && docker push annacloran/imagetest
